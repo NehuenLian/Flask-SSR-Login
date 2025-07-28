@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    </head>
+    <body>
+        <div class="container">
+            <h1>Iniciar Sesión</h1>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                
+                <div class="input-field">
+                    {{ form.username(size=32, placeholder="Usuario") }}
+                </div>
+                
+                <div class="input-field">
+                    {{ form.password(size=32, placeholder="Contraseña") }}
+                </div>
+                
+                {{ form.submit() }}
+            </form>
+            
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+            
+            <div class="links"> 
+                <a href="{{ url_for('auth.register') }}">¿No tienes una cuenta? Registrarse.</a>
+            </div>
+        </div>
+    </body>
+</html>
