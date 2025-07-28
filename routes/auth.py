@@ -20,15 +20,13 @@ def login():
             return render_template('login.html', form=form, error="Usuario o contraseña incorrectos.")
 
         try:
-            print("Hash DB:", user['password'])
-            print("Password ingresado:", password)
 
-            ph.verify(user['password'], password)
+            ph.verify(user.password, password)
             session.clear()
             session.permanent = True
-            session['user_id'] = user['id']
-            session['username'] = user['username']
-            return redirect(url_for('home'))
+            session['user_id'] = user.id
+            session['username'] = user.username
+            return redirect(url_for('home.home'))
         except VerifyMismatchError:
             return render_template('login.html', form=form, error="Usuario o contraseña incorrectos.")
 
@@ -52,10 +50,10 @@ def register():
         db.session.add(new_user)
         db.session.commit()
 
-        return redirect(url_for('login'))
+        return redirect(url_for('auth.login'))
     return render_template('register.html', form=form)
 
 @auth_bp.route('/logout')
 def logout():
     session.clear()
-    return redirect(url_for('login'))
+    return redirect(url_for('auth.login'))
