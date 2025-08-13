@@ -21,13 +21,13 @@ This project is a simple example of a user login system built with Flask, using 
 ## Tech Stack
 
 * **Python 3**
-* **Flask**: Web microframework.
+* **Flask**: Microframework.
 * **Flask-WTF**: Form handling and CSRF protection.
 * **Flask-Limiter**: Rate limiting implementation.
 * **Flask-Talisman**: HTTP security headers configuration.
-* **SQLAlchemy**: ORM (Object-Relational Mapper) for database interaction.
-* **Argon2**: Modern and secure algorithm for password hashing.
-* **SQLite**: Default database (lightweight and file-based).
+* **SQLAlchemy**: ORM for database interaction.
+* **Argon2**: Secure algorithm for password hashing.
+* **SQLite**: Default database.
 
 ## 📂 Structure
 
@@ -54,7 +54,6 @@ Follow these steps to get the application up and running:
 1.  **Clone this repository**:
     ```bash
     git clone https://github.com/NehuenLian/Flask-SSR-Login
-    cd repo-name
     ```
 
 2.  **Create and activate a virtual environment**:
@@ -63,7 +62,7 @@ Follow these steps to get the application up and running:
     # On Linux/macOS:
     source venv/bin/activate
     # On Windows:
-    .\venv\Scripts\activate
+    venv\Scripts\activate
     ```
 
 3.  **Install dependencies**:
@@ -80,10 +79,6 @@ Follow these steps to get the application up and running:
     * **Windows (CMD)**:
         ```bash
         set SECRET_KEY=your_secret_key
-        ```
-    * **Windows (PowerShell)**:
-        ```powershell
-        $env:SECRET_KEY='your_secret_key'
         ```
 
 5.  **Run the application**:
