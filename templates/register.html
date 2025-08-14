@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Registro</title>
+        <title>Register</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <div class="container"> <h1>Registro</h1> <form method="POST">
+        <div class="container">
+            <h1>Register</h1>
+            <form method="POST">
                 {{ form.hidden_tag() }}
                 
                 <div class="input-field">
-                    {{ form.username.label(class="input-label") }} {{ form.username(size=32, placeholder="Elige un usuario") }} 
+                    {{ form.username.label(class="input-label") }} {{ form.username(size=32, placeholder="Choose a username") }}
                 </div>
                 
                 <div class="input-field">
                     {{ form.password.label(class="input-label") }}
-                    {{ form.password(size=32, placeholder="Crea una contraseña") }}
+                    {{ form.password(size=32, placeholder="Create a password") }}
                 </div>
                 
                 {{ form.submit() }}
@@ -26,7 +28,7 @@
             {% endif %}
             
             <div class="links"> 
-                <a href="{{ url_for('auth.login') }}">Volver al Login</a>
+                <a href="{{ url_for('auth.login') }}">Back to Login</a>
             </div>
         </div>
     </body>

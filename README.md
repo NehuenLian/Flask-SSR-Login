@@ -3,6 +3,8 @@
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![Flask](https://img.shields.io/badge/flask-2.3-green)
 
+![Frontend Example](images/frontend_image.jpg)
+
 This project is a simple example of a user login system built with Flask, using **server-side rendering (SSR)** for simplicity and SEO benefits. It demonstrates robust user authentication with **secure password hashing (Argon2)**, **session management**, and **CSRF protection**.
 
 ---

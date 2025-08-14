@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Login</title>
@@ -7,16 +7,16 @@
     </head>
     <body>
         <div class="container">
-            <h1>Iniciar Sesión</h1>
+            <h1>Sign In</h1>
             <form method="POST">
                 {{ form.hidden_tag() }}
                 
                 <div class="input-field">
-                    {{ form.username(size=32, placeholder="Usuario") }}
+                    {{ form.username(size=32, placeholder="Username") }}
                 </div>
                 
                 <div class="input-field">
-                    {{ form.password(size=32, placeholder="Contraseña") }}
+                    {{ form.password(size=32, placeholder="Password") }}
                 </div>
                 
                 {{ form.submit() }}
@@ -27,7 +27,7 @@
             {% endif %}
             
             <div class="links"> 
-                <a href="{{ url_for('auth.register') }}">¿No tienes una cuenta? Registrarse.</a>
+                <a href="{{ url_for('auth.register') }}">Don't have an account? Register.</a>
             </div>
         </div>
     </body>
